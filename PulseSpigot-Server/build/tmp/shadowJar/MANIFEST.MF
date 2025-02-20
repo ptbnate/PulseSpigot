@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Main-Class: org.bukkit.craftbukkit.Main
+Implementation-Title: CraftBukkit
+Implementation-Version: git-PulseSpigot-{exitValue=0, failure=null}
+Implementation-Vendor: Bukkit Team
+Specification-Title: Bukkit
+Specification-Version: 1.8.8-R0.1-SNAPSHOT
+Specification-Vendor: Bukkit Team
+Multi-Release: true
+
