@@ -80,6 +80,9 @@ public final class PulseConfig extends EngineConfig<PulseWorldConfig> implements
 
         @Comment("Whether to disable namespaced commands (for eg. /minecraft:help) and only left normal commands (like /help).")
         public boolean disableNamespacedCommands = false;
+
+        @Comment("Whether or not armor damage should be reduced. (Perfect for bedwars/practice)")
+        public boolean reduceArmorDamage = false;
     }
 
     @Comment("Optimizations that could improve performance, but may cause some issues.")

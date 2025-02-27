@@ -8,6 +8,7 @@ import java.util.List;
 import org.bukkit.craftbukkit.entity.CraftHumanEntity;
 import org.bukkit.craftbukkit.inventory.CraftItemStack;
 import org.bukkit.entity.HumanEntity;
+import xyz.krypton.spigot.config.PulseConfig;
 // CraftBukkit end
 
 public class PlayerInventory implements IInventory {
@@ -506,7 +507,7 @@ public class PlayerInventory implements IInventory {
     }
 
     public void a(float f) {
-        f /= 4.0F;
+        f /= PulseConfig.get().settings.reduceArmorDamage ? 8.0F : 4.0F; // PulseSpigot
         if (f < 1.0F) {
             f = 1.0F;
         }
