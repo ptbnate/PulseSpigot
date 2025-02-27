@@ -5,11 +5,12 @@ import net.minecraft.server.ChunkProviderServer;
 import net.minecraft.server.ChunkRegionLoader;
 import net.minecraft.server.World;
 import org.bukkit.craftbukkit.util.AsynchronousExecutor;
+import xyz.krypton.spigot.config.PulseConfig;
 
 @Deprecated // PulseSpigot
 public class ChunkIOExecutor {
-    static final int BASE_THREADS = 2; // PaperSpigot - Bumped value
-    static final int PLAYERS_PER_THREAD = 50;
+    static final int BASE_THREADS = PulseConfig.get().chunks.baseThreads; // PaperSpigot - Bumped value
+    static final int PLAYERS_PER_THREAD = PulseConfig.get().chunks.playersPerThread;
 
     private static final AsynchronousExecutor<QueuedChunk, Chunk, Runnable, RuntimeException> instance = new AsynchronousExecutor<QueuedChunk, Chunk, Runnable, RuntimeException>(new ChunkIOProvider(), BASE_THREADS);
 
