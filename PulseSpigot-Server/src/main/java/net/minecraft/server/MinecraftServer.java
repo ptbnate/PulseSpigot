@@ -46,6 +46,7 @@ import org.apache.logging.log4j.Logger;
 import joptsimple.OptionSet;
 
 import co.aikar.timings.SpigotTimings; // Spigot
+import xyz.krypton.spigot.config.PulseConfig;
 // CraftBukkit end
 
 public abstract class MinecraftServer implements Runnable, ICommandListener, IAsyncTaskHandler, IMojangStatistics { // PulseSpigot
@@ -913,6 +914,11 @@ public abstract class MinecraftServer implements Runnable, ICommandListener, IAs
                 }
                 // Tuinity end
                 worldserver.explosionDensityCache.clear(); // PaperSpigot - Optimize explosions
+                // PulseSpigot start
+                if (PulseConfig.get().optimizations.optimizedMovementCacheFlushing) {
+                  worldserver.movementCache.clear();
+                }
+                // PulseSpigot end
             // } // CraftBukkit
 
             // this.i[i][this.ticks % 100] = System.nanoTime() - j; // CraftBukkit

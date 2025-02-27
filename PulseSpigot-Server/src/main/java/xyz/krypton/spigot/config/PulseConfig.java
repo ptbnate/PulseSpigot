@@ -80,7 +80,6 @@ public final class PulseConfig extends EngineConfig<PulseWorldConfig> implements
 
         @Comment("Whether to disable namespaced commands (for eg. /minecraft:help) and only left normal commands (like /help).")
         public boolean disableNamespacedCommands = false;
-
     }
 
     @Comment("Optimizations that could improve performance, but may cause some issues.")
@@ -100,6 +99,9 @@ public final class PulseConfig extends EngineConfig<PulseWorldConfig> implements
         @Comment("Higher values may seem more laggy for clients.")
         public int timeUpdateFrequency = 100;
 
+        @Comment("Should we cache and flush movement cache while correcting it everytime it's wrong?")
+        @Comment("This reduces the flooding of movement packets on the server, potentially improving performance and reduced resources usage.")
+        public boolean optimizedMovementCacheFlushing = true;
     }
 
     @Comment("Configuration of exploits fixes that could be used to crash the server or cause other issues.")
@@ -144,8 +146,12 @@ public final class PulseConfig extends EngineConfig<PulseWorldConfig> implements
     public Chunks chunks = new Chunks();
 
     public static class Chunks extends PulseConfigSection {
+        @Comment("The amount of threads used for chunk loading.")
+        public int baseThreads = 2;
+        @Comment("When more players join the server, new threads will be created. This value represents that how many players are needed to create more threads.")
+        public int playersPerThread = 50;
 
-        @Comment("Enabling this option prevents entities from moving in unloaded chunk (and for eg. falling down in \"slow-motion\")")
+        @Comment("Enabling this option prevents entities from moving in unloaded chunk (and for eg. falling down in \"slow-motion\") (Not recommended for practice servers.)")
         public boolean disableUnloadedChunksMovement = false;
 
         @Comment("Normally server uses bukkit.chunk-gc.load-threshold - it's define how many chunks could be loaded before GC will be triggered.")

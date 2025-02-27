@@ -60,6 +60,7 @@ import org.bukkit.event.player.PlayerToggleSprintEvent;
 import org.bukkit.inventory.CraftingInventory;
 import org.bukkit.inventory.InventoryView;
 import org.bukkit.util.NumberConversions;
+import xyz.krypton.spigot.config.PulseConfig;
 import xyz.krypton.spigot.util.async.AsyncUtil;
 // CraftBukkit end
 
@@ -428,6 +429,7 @@ public class PlayerConnection implements PacketListenerPlayIn, IUpdatePlayerList
                         // PulseSpigot end
                     }
 
+                    if (PulseConfig.get().optimizations.optimizedMovementCacheFlushing) this.player.world.movementCache.clear(); // PulseSpigot - Movement Cache
                     this.player.move(d11, d12, d13);
                     this.player.onGround = packetplayinflying.f();
                     double d16 = d12;
@@ -1305,10 +1307,12 @@ public class PlayerConnection implements PacketListenerPlayIn, IUpdatePlayerList
 
         case 3:
             this.player.setSprinting(true);
+            this.player.setSprintingAccurate(true);
             break;
 
         case 4:
             this.player.setSprinting(false);
+            this.player.setSprintingAccurate(false);
             break;
 
         case 5:

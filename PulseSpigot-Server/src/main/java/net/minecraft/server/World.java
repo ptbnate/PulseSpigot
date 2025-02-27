@@ -4,10 +4,7 @@ import com.google.common.base.Predicate;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
-import xyz.krypton.spigot.config.PaperWorldConfig;
-import xyz.krypton.spigot.config.WorldConfig;
-import xyz.krypton.spigot.config.TacoWorldConfig;
-import xyz.krypton.spigot.config.PulseWorldConfig;
+import xyz.krypton.spigot.config.*;
 import org.bukkit.Bukkit;
 import org.bukkit.block.BlockState;
 import org.bukkit.craftbukkit.CraftServer;
@@ -28,6 +25,7 @@ import java.util.concurrent.Executors;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import org.github.paperspigot.event.ServerExceptionEvent;
 import org.github.paperspigot.exception.ServerInternalException;
+import xyz.krypton.spigot.movement.MovementCache;
 // PaperSpigot end
 
 // CraftBukkit start
@@ -142,7 +140,7 @@ public abstract class World implements IBlockAccess {
     private int tileTickPosition;
     public ExecutorService lightingExecutor = Executors.newSingleThreadExecutor(new ThreadFactoryBuilder().setNameFormat("PaperSpigot - Lighting Thread").build()); // PaperSpigot - Asynchronous lighting updates
     public final Map<Explosion.CacheKey, Float> explosionDensityCache = new HashMap<Explosion.CacheKey, Float>(); // PaperSpigot - Optimize explosions
-
+    public final MovementCache movementCache = new MovementCache(); // PulseSpigot - Movement Cache
     public static long chunkToKey(int x, int z)
     {
         long k = ( ( ( (long) x ) & 0xFFFF0000L ) << 16 ) | ( ( ( (long) x ) & 0x0000FFFFL ) << 0 );
@@ -532,6 +530,8 @@ public abstract class World implements IBlockAccess {
         if (block.p() != block1.p() || block.r() != block1.r()) {
             this.x(chunk, blockposition);
         }
+
+         if (PulseConfig.get().optimizations.optimizedMovementCacheFlushing) movementCache.clear(); // PulseSpigot - Movement Cache
 
         // CraftBukkit start
         if (!this.captureBlockStates) { // Don't notify clients or update physics while capturing blockstates
