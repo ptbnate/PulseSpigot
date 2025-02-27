@@ -68,11 +68,16 @@ public abstract class Entity implements ICommandListener {
     public double motX;
     public double motY;
     public double motZ;
+    // PulseSpigot start - Movement Cache
+    public double lastMotX;
+    public double lastMotY;
+    public double lastMotZ;
+    // PulseSpigot end
     public float yaw;
     public float pitch;
     public float lastYaw;
     public float lastPitch;
-    private AxisAlignedBB boundingBox;
+    public AxisAlignedBB boundingBox; // PulseSpigot
     public boolean onGround;
     public boolean positionChanged;
     public boolean E;
@@ -493,6 +498,17 @@ public abstract class Entity implements ICommandListener {
             this.a(this.getBoundingBox().c(d0, d1, d2));
             this.recalcPosition();
         } else {
+            // PulseSpigot start - Movement Cache
+            if (PulseConfig.get().optimizations.optimizedMovementCacheFlushing) {
+                this.lastMotX = this.motX;
+                this.lastMotY = this.motY;
+                this.lastMotZ = this.motZ;
+
+                if (world.movementCache.move(this)) {
+                    return;
+                }
+            }
+            // PulseSpigot end
             // CraftBukkit start - Don't do anything if we aren't moving
             // We need to do this regardless of whether or not we are moving thanks to portals
             try {
@@ -749,6 +765,11 @@ public abstract class Entity implements ICommandListener {
             if (d7 != d1) {
                 block.a(this.world, this);
             }
+            // PuseSpigot start
+            if (PulseConfig.get().optimizations.optimizedMovementCacheFlushing) {
+                world.movementCache.cache(this);
+            }
+            // PulseSpigot end
 
             // CraftBukkit start
             if (positionChanged && getBukkitEntity() instanceof Vehicle) {

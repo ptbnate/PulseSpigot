@@ -7,6 +7,8 @@ import java.net.Proxy;
 import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
+
+import xyz.nate.loader.StartServer;
 import xyz.krypton.spigot.config.Config;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -60,7 +62,7 @@ public class DedicatedServer extends MinecraftServer implements IMinecraftServer
         Thread thread = new Thread("Server console handler") {
             public void run() {
                 // CraftBukkit start
-                if (!org.bukkit.craftbukkit.Main.useConsole) {
+                if (!StartServer.useConsole) {
                     return;
                 }
                 // CraftBukkit end
