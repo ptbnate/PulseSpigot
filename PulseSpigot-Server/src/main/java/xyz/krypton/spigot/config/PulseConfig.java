@@ -83,6 +83,9 @@ public final class PulseConfig extends EngineConfig<PulseWorldConfig> implements
 
         @Comment("Whether or not armor damage should be reduced. (Perfect for bedwars/practice)")
         public boolean reduceArmorDamage = false;
+
+        @Comment("Should we obfuscate the player's health packet. Any mod which displays the opponents health will break")
+        public boolean obfuscatePlayerHealth = false;
     }
 
     @Comment("Optimizations that could improve performance, but may cause some issues.")

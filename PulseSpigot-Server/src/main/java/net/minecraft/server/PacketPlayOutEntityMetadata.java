@@ -20,6 +20,13 @@ public class PacketPlayOutEntityMetadata implements Packet<PacketListenerPlayOut
 
     }
 
+    // PulseSpigot start
+    public PacketPlayOutEntityMetadata(int i, List<DataWatcher.WatchableObject> list) {
+        this.a = i;
+        this.b = list;
+    }
+    // PulseSpigot end
+
     public void a(PacketDataSerializer packetdataserializer) throws IOException {
         this.a = packetdataserializer.e();
         this.b = DataWatcher.b(packetdataserializer);
