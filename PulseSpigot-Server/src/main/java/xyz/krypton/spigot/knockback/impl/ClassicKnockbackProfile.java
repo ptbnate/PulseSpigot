@@ -23,6 +23,9 @@ public class ClassicKnockbackProfile extends KnockbackProfile {
         return Arrays.asList(
                 new KnockbackModifier<>(double.class, "horizontal", 0.9055),
                 new KnockbackModifier<>(double.class, "vertical", 0.8835),
+                new KnockbackModifier<>(boolean.class,"combo-mode", false),
+                new KnockbackModifier<>(double.class,"combo-max-height", 3.0),
+                new KnockbackModifier<>(double.class,"combo-velocity", -0.05),
                 new KnockbackModifier<>(boolean.class, "one-point-seven", false),
                 new KnockbackModifier<>(boolean.class, "friction", false),
                 new KnockbackModifier<>(double.class, "extra-horizontal", 0.2),
@@ -95,7 +98,18 @@ public class ClassicKnockbackProfile extends KnockbackProfile {
         victim.motX -= (d0 / magnitude) * horizontalReduction;
         victim.motZ -= (d1 / magnitude) * horizontalReduction;
 
-        victim.motY = vertical;
+        /* Make sure people don't go too high */
+        if ((boolean) getKnockbackModifier("combo-mode", false).getValue()) {
+            double deltaY = source.locY - victim.locY;
+
+            if (deltaY < (double) getKnockbackModifier("combo-max-height", false).getValue()) {
+                victim.motY += vertical;
+            } else {
+                victim.motY += (double) getKnockbackModifier("combo-velocity", false).getValue();
+            }
+        } else {
+            victim.motY += vertical;
+        }
         if (victim.motY > verticalLimit) {
             victim.motY = verticalLimit;
         }

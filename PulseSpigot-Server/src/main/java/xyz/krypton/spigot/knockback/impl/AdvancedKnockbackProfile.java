@@ -32,6 +32,9 @@ public class AdvancedKnockbackProfile extends KnockbackProfile {
         return Arrays.asList(
                 new KnockbackModifier<>(double.class, "horizontal", 0.9055),
                 new KnockbackModifier<>(double.class, "vertical", 0.8835),
+                new KnockbackModifier<>(boolean.class,"combo-mode", false),
+                new KnockbackModifier<>(double.class,"combo-max-height", 3.0),
+                new KnockbackModifier<>(double.class,"combo-velocity", -0.05),
                 new KnockbackModifier<>(double.class, "arrow-horizontal", 0.4),
                 new KnockbackModifier<>(double.class, "arrow-vertical", 0.4),
                 new KnockbackModifier<>(double.class, "egg-horizontal", 0.4),
@@ -101,8 +104,19 @@ public class AdvancedKnockbackProfile extends KnockbackProfile {
         double magnitude = Math.sqrt(d0 * d0 + d1 * d1);
 
         victim.motX -= (d0 / magnitude) * horizontal;
-        victim.motY += vertical;
         victim.motZ -= (d1 / magnitude) * horizontal;
+
+        if ((boolean) getKnockbackModifier("combo-mode", false).getValue()) {
+            double deltaY = source.locY - victim.locY;
+
+            if (deltaY < (double) getKnockbackModifier("combo-max-height", false).getValue()) {
+                victim.motY += vertical;
+            } else {
+                victim.motY += (double) getKnockbackModifier("combo-velocity", false).getValue();
+            }
+        } else {
+            victim.motY += vertical;
+        }
 
         if (victim.motY > verticalLimit)
             victim.motY = verticalLimit;
