@@ -5,7 +5,7 @@ dependencies {
     implementation(project(":pulsespigot-api"))
 
     // Native (Minecraft) libraries start
-    compileOnly("io.netty:netty-all:4.1.91.Final") // Loaded by CerberusLoader
+    compileOnly("io.netty:netty-all:4.0.25.Final")
     // PulseSpigot start - updated log4j to 2.19.0
     val log4jVersion = "2.19.0"
     library("org.apache.logging.log4j:log4j-api:$log4jVersion")
@@ -26,7 +26,7 @@ dependencies {
         // PulseSpigot end
     }
     library("org.xerial:sqlite-jdbc:3.7.2")
-    compileOnly("mysql:mysql-connector-java:5.1.14") // Loaded by CerberusLoader
+    compileOnly("mysql:mysql-connector-java:5.1.14")
     // Native libraries end
 
     // PulseSpigot libraries start
