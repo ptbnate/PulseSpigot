@@ -1,6 +1,7 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
+import java.io.ByteArrayOutputStream
 
 plugins {
     `java-library`
@@ -100,9 +101,10 @@ subprojects {
 ext["gitHash"] = project.getCurrentGitHash()
 
 fun Project.getCurrentGitHash(): String {
-    val result = exec {
+    val output = ByteArrayOutputStream()
+    exec {
         commandLine("git", "rev-parse", "--short", "HEAD")
+        standardOutput = output
     }
-
-    return result.toString().trim()
+    return output.toString().trim()
 }
