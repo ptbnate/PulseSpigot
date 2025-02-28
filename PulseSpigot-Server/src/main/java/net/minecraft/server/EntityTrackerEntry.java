@@ -52,9 +52,11 @@ public class EntityTrackerEntry {
         this.b = i;
         this.c = j;
         this.u = flag;
-        this.xLoc = MathHelper.floor(entity.locX * 32.0D);
-        this.yLoc = MathHelper.floor(entity.locY * 32.0D);
-        this.zLoc = MathHelper.floor(entity.locZ * 32.0D);
+        // PulseSpigot start - fix tracker offset
+        this.xLoc = (int) Math.round(entity.locX * 32.0D);
+        this.yLoc = (int) Math.round(entity.locY * 32.0D);
+        this.zLoc = (int) Math.round(entity.locZ * 32.0D);
+        // PulseSpigot end
         this.yRot = MathHelper.d(entity.yaw * 256.0F / 360.0F);
         this.xRot = MathHelper.d(entity.pitch * 256.0F / 360.0F);
         this.i = MathHelper.d(entity.getHeadRotation() * 256.0F / 360.0F);
@@ -116,9 +118,11 @@ public class EntityTrackerEntry {
             boolean handleHeadRotation = this.handleHeadRotation(); // PulseSpigot
             if (this.tracker.vehicle == null) {
                 ++this.v;
-                i = MathHelper.floor(this.tracker.locX * 32.0D);
-                j = MathHelper.floor(this.tracker.locY * 32.0D);
-                int k = MathHelper.floor(this.tracker.locZ * 32.0D);
+                // PulseSpigot start - fix tracker offset
+                i = (int) Math.round(this.tracker.locX * 32.0D);
+                j = (int) Math.round(this.tracker.locY * 32.0D);
+                int k = (int) Math.round(this.tracker.locZ * 32.0D);
+                // PulseSpigot end
                 int l = MathHelper.d(this.tracker.yaw * 256.0F / 360.0F);
                 int i1 = MathHelper.d(this.tracker.pitch * 256.0F / 360.0F);
                 int j1 = i - this.xLoc;
@@ -146,7 +150,7 @@ public class EntityTrackerEntry {
                     }
                     // CraftBukkit end
 
-                    if (j1 >= -128 && j1 < 128 && k1 >= -128 && k1 < 128 && l1 >= -128 && l1 < 128 && this.v <= 400 && !this.x && this.y == this.tracker.onGround) {
+                    if (j1 >= -128 && j1 < 128 && k1 >= -128 && k1 < 128 && l1 >= -128 && l1 < 128 && this.v <= 400 && !this.x) { // PulseSpigot - remove the useless onGround check
                         if ((!flag || !flag1) && !(this.tracker instanceof EntityArrow)) {
                             if (flag) {
                                 object = new PacketPlayOutEntity.PacketPlayOutRelEntityMove(this.tracker.getId(), (byte) j1, (byte) k1, (byte) l1, this.tracker.onGround);
@@ -231,10 +235,11 @@ public class EntityTrackerEntry {
                     this.yRot = i;
                     this.xRot = j;
                 }
-
-                this.xLoc = MathHelper.floor(this.tracker.locX * 32.0D);
-                this.yLoc = MathHelper.floor(this.tracker.locY * 32.0D);
-                this.zLoc = MathHelper.floor(this.tracker.locZ * 32.0D);
+                // PulseSpigot start - fix tracker offset
+                this.xLoc = (int) Math.round(this.tracker.locX * 32.0D);
+                this.yLoc = (int) Math.round(this.tracker.locY * 32.0D);
+                this.zLoc = (int) Math.round(this.tracker.locZ * 32.0D);
+                // PulseSpigot end
                 this.b();
                 this.x = true;
             }
