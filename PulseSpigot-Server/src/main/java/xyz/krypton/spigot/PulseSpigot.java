@@ -33,7 +33,7 @@ import xyz.krypton.spigot.util.yaml.YamlConfig;
 public class PulseSpigot {
 
     private static PulseSpigot INSTANCE;
-    private static String version = "1.6.0";
+    private static String version = "1.6.1";
 
     private final MinecraftServer server;
 
