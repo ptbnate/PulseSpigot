@@ -978,8 +978,20 @@ public class PlayerConnection implements PacketListenerPlayIn, IUpdatePlayerList
                 return;
             }
             // CraftBukkit end
+            this.player.inventory.prevItemInHandIndex = this.player.inventory.itemInHandIndex; // PulseSpigot
             this.player.inventory.itemInHandIndex = packetplayinhelditemslot.a();
             this.player.resetIdleTimer();
+            // PulseSpigot start - ensure correct attack damage on slot change
+            ItemStack prevItemStack = this.player.inventory.items[this.player.inventory.prevItemInHandIndex];
+            if (prevItemStack != null) {
+                for (AttributeModifier attributemodifier : prevItemStack.B().get("generic.attackDamage")) {
+                    this.player.getAttributeInstance(GenericAttributes.ATTACK_DAMAGE).c(attributemodifier); // remove attack damage from previous held item
+                }
+            }
+            if (this.player.inventory.getItemInHand() != null) {
+                ((EntityLiving) this.player).c.b(this.player.inventory.getItemInHand().B()); // apply attack damage from current held item
+            }
+            // PulseSpigot end
         } else {
             PlayerConnection.c.warn(this.player.getName() + " tried to set an invalid carried item");
             this.disconnect("Invalid hotbar selection (Hacking?)"); // CraftBukkit //Spigot "Nope" -> Descriptive reason

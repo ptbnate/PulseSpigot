@@ -41,7 +41,7 @@ public abstract class EntityLiving extends Entity {
 
     private static final UUID a = FastUUID.parseUUID("662A6B8D-DA3E-4C1C-8813-96EA6097278D");
     private static final AttributeModifier b = (new AttributeModifier(EntityLiving.a, "Sprinting speed boost", 0.30000001192092896D, 2)).a(false);
-    private AttributeMapBase c;
+    public AttributeMapBase c; // PulseSpigot
     public CombatTracker combatTracker = new CombatTracker(this);
     public final Map<Integer, MobEffect> effects = Maps.newHashMap();
     private final ItemStack[] h = new ItemStack[5];

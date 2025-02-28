@@ -703,6 +703,7 @@ public abstract class EntityHuman extends EntityLiving {
         NBTTagList nbttaglist = nbttagcompound.getList("Inventory", 10);
 
         this.inventory.b(nbttaglist);
+        this.inventory.prevItemInHandIndex = this.inventory.itemInHandIndex; // PulseSpigot
         this.inventory.itemInHandIndex = nbttagcompound.getInt("SelectedItemSlot");
         this.sleeping = nbttagcompound.getBoolean("Sleeping");
         this.sleepTicks = nbttagcompound.getShort("SleepTimer");

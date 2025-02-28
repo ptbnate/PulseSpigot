@@ -81,6 +81,7 @@ public class CraftInventoryPlayer extends CraftInventory implements org.bukkit.i
 
     public void setHeldItemSlot(int slot) {
         Validate.isTrue(slot >= 0 && slot < PlayerInventory.getHotbarSize(), "Slot is not between 0 and 8 inclusive");
+        this.getInventory().prevItemInHandIndex = this.getInventory().itemInHandIndex; // PulseSpigot
         this.getInventory().itemInHandIndex = slot;
         ((CraftPlayer) this.getHolder()).getHandle().playerConnection.sendPacket(new PacketPlayOutHeldItemSlot(slot));
     }

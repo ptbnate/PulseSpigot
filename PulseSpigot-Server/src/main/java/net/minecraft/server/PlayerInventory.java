@@ -16,6 +16,7 @@ public class PlayerInventory implements IInventory {
     public ItemStack[] items = new ItemStack[36];
     public ItemStack[] armor = new ItemStack[4];
     public int itemInHandIndex;
+    public int prevItemInHandIndex; // PulseSpigot
     public EntityHuman player;
     private ItemStack f;
     public boolean e;
@@ -600,6 +601,7 @@ public class PlayerInventory implements IInventory {
             this.setEquipment(i, ItemStack.b(playerinventory.armor[i])); // PulseSpigot
         }
 
+        this.prevItemInHandIndex = playerinventory.prevItemInHandIndex; // PulseSpigot
         this.itemInHandIndex = playerinventory.itemInHandIndex;
     }
 
