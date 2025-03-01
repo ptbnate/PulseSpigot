@@ -35,6 +35,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.util.Vector;
 import org.spigotmc.event.entity.EntityDismountEvent;
 import xyz.krypton.spigot.PulseSpigot;
+import xyz.krypton.spigot.config.PulseConfig;
 // PaperSpigot end
 
 public abstract class EntityLiving extends Entity {
@@ -1868,6 +1869,8 @@ public abstract class EntityLiving extends Entity {
     }
 
     public Vec3D d(float f) {
+        if (this instanceof EntityPlayer) return super.d(f);
+
         if (f == 1.0F) {
             return this.f(this.pitch, this.aK);
         } else {
