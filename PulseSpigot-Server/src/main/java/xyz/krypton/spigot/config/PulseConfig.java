@@ -86,6 +86,9 @@ public final class PulseConfig extends EngineConfig<PulseWorldConfig> implements
 
         @Comment("Should we obfuscate the player's health packet. Any mod which displays the opponents health will break")
         public boolean obfuscatePlayerHealth = false;
+
+        @Comment("The delay to pick an item up.")
+        public int itemPickupDelay = 40;
     }
 
     @Comment("Optimizations that could improve performance, but may cause some issues.")

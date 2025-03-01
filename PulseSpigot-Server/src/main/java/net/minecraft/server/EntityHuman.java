@@ -22,6 +22,7 @@ import org.bukkit.event.player.PlayerVelocityEvent;
 import org.bukkit.util.Vector;
 import xyz.krypton.spigot.PulseSpigot;
 import xyz.krypton.spigot.config.PaperConfig;
+import xyz.krypton.spigot.config.PulseConfig;
 import xyz.krypton.spigot.knockback.KnockbackProfile;
 // CraftBukkit end
 
@@ -571,7 +572,7 @@ public abstract class EntityHuman extends EntityLiving {
             double d0 = this.locY - 0.30000001192092896D + (double) this.getHeadHeight();
             EntityItem entityitem = new EntityItem(this.world, this.locX, d0, this.locZ, itemstack);
 
-            entityitem.a(40);
+            entityitem.a(PulseConfig.get().settings.itemPickupDelay); // PulseSpigot
             if (flag1) {
                 entityitem.c(this.getName());
             }
