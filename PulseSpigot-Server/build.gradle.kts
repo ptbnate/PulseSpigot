@@ -5,7 +5,7 @@ dependencies {
     implementation(project(":pulsespigot-api"))
 
     // Native (Minecraft) libraries start
-    compileOnly("io.netty:netty-all:4.0.25.Final")
+    compileOnly("io.netty:netty-all:4.1.78.Final") // PulseSpigot - update netty
     // PulseSpigot start - updated log4j to 2.19.0
     val log4jVersion = "2.19.0"
     library("org.apache.logging.log4j:log4j-api:$log4jVersion")
