@@ -1,6 +1,5 @@
 # PulseSpigot
-A 1.8 fork of NachoSpigot which aims to optimize, give long term support for 1.8.9 and add useful apis, 
-Since both Paper and Spigot no longer support the version.
+A 1.8 fork of PaperSpigot which aims to optimize, give long term support for 1.8.9 and add useful apis, 
 
 **The most up to date, optimized 1.8.9 on the market**
 
