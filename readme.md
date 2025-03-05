@@ -25,4 +25,6 @@ If I missed anyone, credit goes to them as well.
 
 It's been a great journey. I enjoyed working on spigot, but sometimes, you just have to move on.
 
+Copyright © Nate @ Krypton-Development
+
 Goodluck - Caelan
