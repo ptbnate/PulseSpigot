@@ -20,5 +20,3 @@ It's been a great journey. I enjoyed working on spigot, but sometimes, you just 
 This project is licensed under `AGPL-3.0-or-later`. Please check the `LICENSE` file, for more information.
 
 Copyright © Nate @ Krypton-Development
-
-Goodluck - Caelan
