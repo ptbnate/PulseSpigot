@@ -1,15 +1,6 @@
 # PulseSpigot  
 A 1.8 fork of PaperSpigot that aims to optimize performance, provide long-term support for 1.8.9, and introduce useful APIs.  
-
-## Features  
-Since 1.8 is now over eight years old, it has missed out on many critical fixes, updates, and optimizations.  
-Our goal is to bring these much-needed improvements to 1.8!  
-
-By the end, we aim to:  
-- Support Java 23  
-- Use Netty 4.1+  
-- Allow higher player counts  
-- Maintain compatibility with a large number of plugins  
+The purpose of this spigot is to out-perform paid forks like Carbon in performance.
 
 ## Credits  
 - **Nate** – Original author and primary contributor, with the most valuable code contributions to the project. Huge credit goes to him.  
