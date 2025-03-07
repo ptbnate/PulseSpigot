@@ -7,7 +7,6 @@ The latest pre-build server JAR can be downloaded by clicking the button below.
 [![Download](https://img.shields.io/badge/Download-Nightly-blue?style=for-the-badge&logo=github)](https://nightly.link/ptbnate/PulseSpigot/workflows/build/main/PulseSpigot.zip)
 
 ## API
-See our API patches [here](./patches/api/).
 <details>
 <summary>Maven</summary>
 
