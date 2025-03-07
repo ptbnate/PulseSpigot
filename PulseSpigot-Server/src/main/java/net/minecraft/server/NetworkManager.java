@@ -19,13 +19,14 @@ import io.netty.util.concurrent.GenericFutureListener;
 import java.net.SocketAddress;
 import java.util.Queue;
 
+import me.nate.spigot.artemis.FlushAPI;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.Validate;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.Marker;
 import org.apache.logging.log4j.MarkerManager;
-import xyz.krypton.spigot.exception.CryptException;
+import me.nate.spigot.exception.CryptException;
 
 public class NetworkManager extends SimpleChannelInboundHandler<Packet> {
 
@@ -373,6 +374,14 @@ public class NetworkManager extends SimpleChannelInboundHandler<Packet> {
         // Tuinity start - make only one flush call per sendPacketQueue() call
         final boolean needsFlush = this.canFlush; // make only one flush call per sendPacketQueue() call
         boolean hasWrotePacket = false;
+        // PulseSpigot start
+        final boolean flushApi = FlushAPI.getApi() != null
+                && this.m instanceof PlayerConnection
+                && ((PlayerConnection) m).getPlayer() != null;
+        if (flushApi) {
+            FlushAPI.getApi().callPre(((PlayerConnection) m).getPlayer().getUniqueId());
+        }
+        // PulseSpigot end
         // Tuinity end
         // If we are on main, we are safe here in that nothing else should be processing queue off main anymore
         // But if we are not on main due to login/status, the parent is synchronized on packetQueue
@@ -400,6 +409,11 @@ public class NetworkManager extends SimpleChannelInboundHandler<Packet> {
                 hasWrotePacket = true;
                 // Tuinity end
             }
+            // PulseSpigot start
+            if (flushApi) {
+                FlushAPI.getApi().callPost(((PlayerConnection) m).getPlayer().getUniqueId());
+            }
+            // PulseSpigot end
         }
         return true;
     }
