@@ -1,6 +1,9 @@
 name: PulseSpigot Build
 
-on: []
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
