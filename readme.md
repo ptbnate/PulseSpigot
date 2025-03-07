@@ -14,7 +14,5 @@ If I missed anyone, credit goes to them as well.
 
 **Note**: If you decide to use the code from this spigot then credits should be given, otherwise it'll count as skidding.
 
-It's been a great journey. I enjoyed working on spigot, but sometimes, you just have to move on.
-
 ## License
 This project is licensed under `AGPL-3.0-or-later`. Please check the `LICENSE` file, for more information.
