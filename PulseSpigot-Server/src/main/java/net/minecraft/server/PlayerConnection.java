@@ -1319,12 +1319,10 @@ public class PlayerConnection implements PacketListenerPlayIn, IUpdatePlayerList
 
         case 3:
             this.player.setSprinting(true);
-            this.player.setSprintingAccurate(true);
             break;
 
         case 4:
             this.player.setSprinting(false);
-            this.player.setSprintingAccurate(false);
             break;
 
         case 5:
