@@ -44,7 +44,7 @@ dependencies {
 </details>
 
 ## Building
-To compile PandaSpigot, you'll need:
+To compile PulseSpigot, you'll need:
 - JDK 8 (or above)
 - Git
 - Bash
