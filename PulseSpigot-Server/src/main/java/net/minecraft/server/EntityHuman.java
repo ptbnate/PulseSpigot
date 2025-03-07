@@ -987,7 +987,7 @@ public abstract class EntityHuman extends EntityLiving {
 
                 int i = b0 + EnchantmentManager.a((EntityLiving) this);
 
-                if (this.isSprintingAccurate()) {
+                if (this.isSprinting()) {
                     ++i;
                 }
 
