@@ -66,10 +66,10 @@ fun Project.getCurrentGitHash(): String {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.github.ptbnate"
-            artifactId = "pulsespigot-server"
-            version = "1.8.8-R0.1-SNAPSHOT"
             from(components["java"])
+            groupId = "com.github.ptbnate"
+            artifactId = "pulsespigot-api"
+            version = "1.8.8-R0.1-SNAPSHOT"
         }
     }
 }
