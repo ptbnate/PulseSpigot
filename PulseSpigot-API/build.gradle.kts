@@ -63,3 +63,14 @@ tasks {
         }
     }
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+            groupId = "com.github.ptbnate"
+            artifactId = "pulsespigot-api"
+            version = "1.8.8-R0.1-SNAPSHOT"
+        }
+    }
+}
