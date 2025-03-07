@@ -1,6 +1,6 @@
 package net.minecraft.server;
 
-import xyz.krypton.spigot.config.Config;
+import me.nate.spigot.config.Config;
 // CraftBukkit start
 import java.net.InetAddress;
 // CraftBukkit end

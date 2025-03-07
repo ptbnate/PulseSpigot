@@ -35,7 +35,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.UUID;
-import xyz.krypton.spigot.config.Config;
+import me.nate.spigot.config.Config;
 import org.apache.commons.io.IOUtils;
 
 public class UserCache {

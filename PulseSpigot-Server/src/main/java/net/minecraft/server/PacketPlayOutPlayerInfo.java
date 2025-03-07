@@ -1,6 +1,6 @@
 package net.minecraft.server;
 
-import xyz.krypton.spigot.util.Objects; // PulseSpigot
+import me.nate.spigot.util.Objects; // PulseSpigot
 import com.google.common.collect.Lists;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;

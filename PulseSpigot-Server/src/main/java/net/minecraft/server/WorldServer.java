@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.UUID;
+
+import me.nate.spigot.config.PulseConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,8 +25,7 @@ import org.bukkit.craftbukkit.util.HashTreeSet;
 
 import org.bukkit.event.block.BlockFormEvent;
 import org.bukkit.event.weather.LightningStrikeEvent;
-import xyz.krypton.spigot.chunk.AsyncChunkProvider;
-import xyz.krypton.spigot.config.PulseConfig;
+import me.nate.spigot.chunk.AsyncChunkProvider;
 // CraftBukkit end
 
 public class WorldServer extends World implements IAsyncTaskHandler {

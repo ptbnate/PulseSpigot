@@ -9,7 +9,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
 import org.bukkit.craftbukkit.Main;
-import xyz.krypton.spigot.config.Config;
+import me.nate.spigot.config.Config;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,7 +21,7 @@ import org.bukkit.craftbukkit.LoggerOutputStream;
 import org.bukkit.event.server.ServerCommandEvent;
 import org.bukkit.craftbukkit.util.Waitable;
 import org.bukkit.event.server.RemoteServerCommandEvent;
-import xyz.krypton.spigot.console.PulseConsole;
+import me.nate.spigot.console.PulseConsole;
 // CraftBukkit end
 
 public class DedicatedServer extends MinecraftServer implements IMinecraftServer {

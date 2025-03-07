@@ -4,7 +4,7 @@ import com.google.common.base.Predicate;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
-import xyz.krypton.spigot.config.*;
+import me.nate.spigot.config.*;
 import org.bukkit.Bukkit;
 import org.bukkit.block.BlockState;
 import org.bukkit.craftbukkit.CraftServer;
@@ -25,7 +25,7 @@ import java.util.concurrent.Executors;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import org.github.paperspigot.event.ServerExceptionEvent;
 import org.github.paperspigot.exception.ServerInternalException;
-import xyz.krypton.spigot.movement.MovementCache;
+import me.nate.spigot.movement.MovementCache;
 // PaperSpigot end
 
 // CraftBukkit start

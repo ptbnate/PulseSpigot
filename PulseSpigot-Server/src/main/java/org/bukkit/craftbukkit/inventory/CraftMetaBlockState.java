@@ -1,6 +1,6 @@
 package org.bukkit.craftbukkit.inventory;
 
-import xyz.krypton.spigot.util.Objects; // PulseSpigot
+import me.nate.spigot.util.Objects; // PulseSpigot
 import com.google.common.collect.ImmutableMap;
 import java.util.Map;
 import net.minecraft.server.BlockJukeBox;

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import me.nate.spigot.config.PulseConfig;
 import net.minecraft.server.NBTTagCompound;
 import net.minecraft.server.NBTTagList;
 
@@ -21,7 +22,6 @@ import net.minecraft.server.IChatBaseComponent.ChatSerializer;
 import net.minecraft.server.IChatBaseComponent;
 import net.minecraft.server.NBTTagString;
 import org.bukkit.craftbukkit.util.CraftChatMessage;
-import xyz.krypton.spigot.config.PulseConfig;
 
 // Spigot start
 import static org.spigotmc.ValidateUtils.*;

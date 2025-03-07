@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
+import me.nate.spigot.config.PaperConfig;
 import net.minecraft.server.*;
 
-import xyz.krypton.spigot.config.PaperConfig;
 import org.bukkit.EntityEffect;
 import org.bukkit.Location;
 import org.bukkit.Server;

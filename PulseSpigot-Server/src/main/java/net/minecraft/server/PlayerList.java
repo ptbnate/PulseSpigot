@@ -16,7 +16,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-import xyz.krypton.spigot.config.Config;
+import me.nate.spigot.config.Config;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -41,7 +41,7 @@ import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 import org.bukkit.util.Vector;
 import org.jetbrains.annotations.Nullable;
 import org.spigotmc.event.player.PlayerSpawnLocationEvent;
-import xyz.krypton.spigot.console.PulseConsoleCommandSender;
+import me.nate.spigot.console.PulseConsoleCommandSender;
 // CraftBukkit end
 
 public abstract class PlayerList {

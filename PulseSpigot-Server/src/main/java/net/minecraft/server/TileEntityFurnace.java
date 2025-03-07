@@ -3,7 +3,7 @@ package net.minecraft.server;
 // CraftBukkit start
 import java.util.List;
 
-import xyz.krypton.spigot.item.Burnable;
+import me.nate.spigot.item.Burnable;
 import org.bukkit.craftbukkit.inventory.CraftItemStack;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.event.inventory.FurnaceBurnEvent;

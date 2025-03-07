@@ -14,8 +14,8 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.NetworkManager;
 import net.minecraft.server.PacketStatusOutServerInfo;
 import net.minecraft.server.ServerPing;
-import xyz.krypton.spigot.config.Config;
-import xyz.krypton.spigot.util.Objects;
+import me.nate.spigot.config.Config;
+import me.nate.spigot.util.Objects;
 
 public final class StandardPaperServerListPingEventImpl extends PaperServerListPingEventImpl {
 

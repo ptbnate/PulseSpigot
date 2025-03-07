@@ -1,6 +1,6 @@
 package net.minecraft.server;
 
-import xyz.krypton.spigot.config.PaperConfig;
+import me.nate.spigot.config.PaperConfig;
 // CraftBukkit start
 import org.bukkit.craftbukkit.event.CraftEventFactory;
 import org.bukkit.craftbukkit.inventory.CraftItemStack;

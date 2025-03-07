@@ -1,6 +1,6 @@
 package net.minecraft.server;
 
-import xyz.krypton.spigot.util.Objects; // PulseSpigot
+import me.nate.spigot.util.Objects; // PulseSpigot
 
 public class BaseBlockPosition implements Comparable<BaseBlockPosition> {
 

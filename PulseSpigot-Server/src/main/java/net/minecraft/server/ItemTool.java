@@ -2,8 +2,8 @@ package net.minecraft.server;
 
 import com.google.common.collect.Multimap;
 import java.util.Set;
-import xyz.krypton.spigot.item.Burnable;
-import xyz.krypton.spigot.item.HasToolMaterial;
+import me.nate.spigot.item.Burnable;
+import me.nate.spigot.item.HasToolMaterial;
 
 public class ItemTool extends Item implements Burnable, HasToolMaterial {
 

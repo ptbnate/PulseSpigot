@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 import java.util.Queue;
 import java.util.function.Supplier;
-import xyz.krypton.spigot.util.async.AsyncUtil;
+import me.nate.spigot.util.async.AsyncUtil;
 import org.bukkit.Location;
 import org.spigotmc.AsyncCatcher;
 

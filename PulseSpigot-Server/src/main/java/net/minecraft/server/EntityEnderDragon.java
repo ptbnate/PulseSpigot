@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import xyz.krypton.spigot.util.MathUtil;
+import me.nate.spigot.util.MathUtil;
 // CraftBukkit start
 import org.bukkit.block.BlockState;
 import org.bukkit.craftbukkit.event.CraftEventFactory;

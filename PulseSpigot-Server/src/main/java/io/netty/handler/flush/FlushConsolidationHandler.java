@@ -3,7 +3,7 @@ package io.netty.handler.flush;
 import io.netty.channel.ChannelDuplexHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelPromise;
-import xyz.krypton.spigot.util.Objects;
+import me.nate.spigot.util.Objects;
 
 import java.util.concurrent.Future;
 

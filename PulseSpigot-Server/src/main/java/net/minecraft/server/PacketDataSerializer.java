@@ -24,8 +24,8 @@ import java.util.UUID;
 
 import io.netty.util.ByteProcessor;
 import org.bukkit.craftbukkit.inventory.CraftItemStack; // CraftBukkit
-import xyz.krypton.spigot.config.PulseConfig;
-import xyz.krypton.spigot.util.CompatHacks;
+import me.nate.spigot.config.PulseConfig;
+import me.nate.spigot.util.CompatHacks;
 
 public class PacketDataSerializer extends ByteBuf {
 

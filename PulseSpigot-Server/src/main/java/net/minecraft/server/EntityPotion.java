@@ -8,7 +8,7 @@ import java.util.HashMap;
 
 import org.bukkit.craftbukkit.entity.CraftLivingEntity;
 import org.bukkit.entity.LivingEntity;
-import xyz.krypton.spigot.PulseSpigot;
+import me.nate.spigot.PulseSpigot;
 // CraftBukkit end
 
 public class EntityPotion extends EntityProjectile {

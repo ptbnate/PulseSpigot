@@ -1,8 +1,9 @@
 package net.minecraft.server;
 
 import com.google.common.collect.Maps;
+import me.nate.spigot.config.PulseConfig;
+
 import java.util.Map;
-import xyz.krypton.spigot.config.PulseConfig;
 
 public class StatisticManager {
 

@@ -1,6 +1,6 @@
 package net.minecraft.server;
 
-import xyz.krypton.spigot.config.PulseWorldConfig.Optimizations.Ticking.LightDetector; // PulseSpigot
+import me.nate.spigot.config.PulseWorldConfig.Optimizations.Ticking.LightDetector; // PulseSpigot
 
 public class TileEntityLightDetector extends TileEntity implements IUpdatePlayerListBox {
 

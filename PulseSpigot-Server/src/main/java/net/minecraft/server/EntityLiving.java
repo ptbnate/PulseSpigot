@@ -14,6 +14,7 @@ import java.util.UUID;
 // CraftBukkit start
 import java.util.ArrayList;
 import com.google.common.base.Function;
+import me.nate.spigot.PulseSpigot;
 import org.bukkit.craftbukkit.event.CraftEventFactory;
 import org.bukkit.craftbukkit.potion.CraftPotionUtils;
 import org.bukkit.entity.LivingEntity;
@@ -28,14 +29,9 @@ import org.bukkit.event.entity.PotionEffectRemoveEvent;
 import org.bukkit.event.vehicle.VehicleExitEvent;
 // CraftBukkit end
 
-import co.aikar.timings.SpigotTimings; // Spigot
-
 // PaperSpigot start
 import org.bukkit.Bukkit;
-import org.bukkit.util.Vector;
 import org.spigotmc.event.entity.EntityDismountEvent;
-import xyz.krypton.spigot.PulseSpigot;
-import xyz.krypton.spigot.config.PulseConfig;
 // PaperSpigot end
 
 public abstract class EntityLiving extends Entity {

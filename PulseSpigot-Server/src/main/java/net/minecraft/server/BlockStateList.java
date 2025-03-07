@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 import com.google.common.base.Function;
 import com.google.common.base.Joiner;
-import xyz.krypton.spigot.util.Objects; // PulseSpigot
+import me.nate.spigot.util.Objects; // PulseSpigot
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;

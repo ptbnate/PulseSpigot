@@ -1,6 +1,6 @@
 package net.minecraft.server;
 
-import xyz.krypton.spigot.config.PaperConfig;
+import me.nate.spigot.config.PaperConfig;
 
 public class MobEffectAttackDamage extends MobEffectList {
 

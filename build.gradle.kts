@@ -14,7 +14,7 @@ allprojects {
     apply(plugin = "maven-publish")
     apply(plugin = "com.github.johnrengelman.shadow")
 
-    group = "xyz.krypton.spigot"
+    group = "me.nate.spigot"
     version = "1.8.8-R0.1-SNAPSHOT"
 
     java {

@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.UUID;
 
 // CraftBukkit start
+import me.nate.spigot.config.PulseConfig;
 import org.bukkit.craftbukkit.entity.CraftHumanEntity;
 import org.bukkit.craftbukkit.entity.CraftItem;
 import org.bukkit.craftbukkit.inventory.CraftItemStack;
@@ -18,12 +19,10 @@ import org.bukkit.event.player.PlayerBedEnterEvent;
 import org.bukkit.event.player.PlayerBedLeaveEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
-import org.bukkit.event.player.PlayerVelocityEvent;
 import org.bukkit.util.Vector;
-import xyz.krypton.spigot.PulseSpigot;
-import xyz.krypton.spigot.config.PaperConfig;
-import xyz.krypton.spigot.config.PulseConfig;
-import xyz.krypton.spigot.knockback.KnockbackProfile;
+import me.nate.spigot.PulseSpigot;
+import me.nate.spigot.config.PaperConfig;
+import me.nate.spigot.knockback.KnockbackProfile;
 // CraftBukkit end
 
 public abstract class EntityHuman extends EntityLiving {

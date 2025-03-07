@@ -10,11 +10,12 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+
+import me.nate.spigot.config.PulseConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import xyz.krypton.spigot.PulseSpigot;
-import xyz.krypton.spigot.config.PulseConfig;
+import me.nate.spigot.PulseSpigot;
 // CraftBukkit start
 import org.bukkit.Bukkit;
 import org.bukkit.WeatherType;
@@ -24,7 +25,7 @@ import org.bukkit.craftbukkit.event.CraftEventFactory;
 import org.bukkit.craftbukkit.inventory.CraftItemStack;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
-import xyz.krypton.spigot.knockback.KnockbackProfile;
+import me.nate.spigot.knockback.KnockbackProfile;
 // CraftBukkit end
 
 public class EntityPlayer extends EntityHuman implements ICrafting {

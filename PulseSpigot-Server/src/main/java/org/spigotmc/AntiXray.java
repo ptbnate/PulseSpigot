@@ -7,7 +7,7 @@ import net.minecraft.server.BlockPosition;
 import net.minecraft.server.Blocks;
 import net.minecraft.server.World;
 import org.bukkit.craftbukkit.util.CraftMagicNumbers;
-import xyz.krypton.spigot.config.WorldConfig;
+import me.nate.spigot.config.WorldConfig;
 
 // PaperSpigot start
 import java.util.HashSet;

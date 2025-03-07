@@ -2,6 +2,7 @@ package org.spigotmc;
 
 import java.util.List;
 
+import me.nate.spigot.config.WorldConfig;
 import net.minecraft.server.AxisAlignedBB;
 import net.minecraft.server.Chunk;
 import net.minecraft.server.Entity;
@@ -29,7 +30,6 @@ import net.minecraft.server.EntityWither;
 import net.minecraft.server.MathHelper;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.World;
-import xyz.krypton.spigot.config.WorldConfig;
 
 
 public class ActivationRange

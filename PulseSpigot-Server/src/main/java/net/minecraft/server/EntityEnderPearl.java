@@ -1,10 +1,10 @@
 package net.minecraft.server;
 
 // CraftBukkit start
+import me.nate.spigot.PulseSpigot;
 import org.bukkit.Bukkit;
 import org.bukkit.craftbukkit.event.CraftEventFactory;
 import org.bukkit.event.player.PlayerTeleportEvent;
-import xyz.krypton.spigot.PulseSpigot;
 // CraftBukkit end
 
 public class EntityEnderPearl extends EntityProjectile {

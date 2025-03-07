@@ -8,6 +8,7 @@ import java.util.concurrent.Callable;
 
 import com.eatthepath.uuid.FastUUID;
 // CraftBukkit start
+import me.nate.spigot.config.PulseConfig;
 import org.apache.logging.log4j.LogManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -34,11 +35,10 @@ import org.bukkit.event.entity.EntityCombustEvent;
 import org.bukkit.event.entity.EntityPortalEvent;
 import org.bukkit.plugin.PluginManager;
 // CraftBukkit end
-import xyz.krypton.spigot.PulseSpigot;
-import xyz.krypton.spigot.config.PulseConfig;
+import me.nate.spigot.PulseSpigot;
 // PaperSpigot start
 import org.spigotmc.event.entity.EntityDismountEvent;
-import xyz.krypton.spigot.knockback.KnockbackProfile;
+import me.nate.spigot.knockback.KnockbackProfile;
 // PaperSpigot end
 
 public abstract class Entity implements ICommandListener {
@@ -764,7 +764,7 @@ public abstract class Entity implements ICommandListener {
             if (d7 != d1) {
                 block.a(this.world, this);
             }
-            // PuseSpigot start
+            // PulseSpigot start
             if (PulseConfig.get().optimizations.optimizedMovementCacheFlushing) {
                 world.movementCache.cache(this);
             }

@@ -5,7 +5,7 @@ import com.google.common.base.Predicates;
 import java.util.Iterator;
 import java.util.List;
 
-import xyz.krypton.spigot.util.MathUtil;
+import me.nate.spigot.util.MathUtil;
 // CraftBukkit start
 import org.bukkit.craftbukkit.event.CraftEventFactory;
 import org.bukkit.event.entity.EntityRegainHealthEvent;

@@ -14,6 +14,8 @@ import java.util.UUID;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
+
+import me.nate.spigot.config.PulseConfig;
 import net.minecraft.server.*;
 
 import org.apache.commons.lang.Validate;
@@ -57,8 +59,7 @@ import org.bukkit.plugin.messaging.StandardMessenger;
 import org.bukkit.util.Vector;
 import org.github.paperspigot.exception.ServerInternalException;
 import org.jetbrains.annotations.NotNull;
-import xyz.krypton.spigot.async.AsyncPriority;
-import xyz.krypton.spigot.config.PulseConfig;
+import me.nate.spigot.async.AsyncPriority;
 
 public class CraftWorld implements World {
     public static final int CUSTOM_DIMENSION_OFFSET = 10;

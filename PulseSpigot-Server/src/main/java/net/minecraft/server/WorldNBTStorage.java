@@ -11,7 +11,7 @@ import java.io.OutputStream;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import xyz.krypton.spigot.config.PaperConfig;
+import me.nate.spigot.config.PaperConfig;
 // CraftBukkit start
 import java.util.UUID;
 

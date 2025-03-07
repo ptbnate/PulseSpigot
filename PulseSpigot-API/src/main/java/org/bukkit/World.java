@@ -24,7 +24,7 @@ import org.bukkit.util.Vector;
 // PulseSpigot start
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import xyz.krypton.spigot.async.AsyncPriority;
+import me.nate.spigot.async.AsyncPriority;
 // PulseSpigot end
 
 /**

@@ -1,17 +1,17 @@
 package net.minecraft.server;
 
-import com.google.common.collect.Sets;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+
+import me.nate.spigot.config.PulseConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 // CraftBukkit start
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerVelocityEvent;
-import xyz.krypton.spigot.config.PulseConfig;
 // CraftBukkit end
 
 public class EntityTrackerEntry {

@@ -12,8 +12,8 @@ import org.apache.logging.log4j.Logger;
 import java.util.Collections;
 import java.util.Queue;
 import java.util.LinkedList;
-import xyz.krypton.spigot.async.AsyncPriority;
-import xyz.krypton.spigot.chunk.AsyncChunkProvider;
+import me.nate.spigot.async.AsyncPriority;
+import me.nate.spigot.chunk.AsyncChunkProvider;
 // CraftBukkit end
 
 public class PlayerChunkMap {

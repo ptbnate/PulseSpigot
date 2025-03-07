@@ -9,7 +9,7 @@ import java.util.Random;
 import java.util.List;
 import java.util.Map;
 
-import xyz.krypton.spigot.config.PaperConfig;
+import me.nate.spigot.config.PaperConfig;
 import org.bukkit.Location;
 import org.bukkit.TreeType;
 import org.bukkit.block.BlockState;

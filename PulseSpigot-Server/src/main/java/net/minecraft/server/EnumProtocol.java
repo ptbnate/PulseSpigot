@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.function.Supplier; // Universe
 import org.apache.logging.log4j.LogManager;
-import xyz.krypton.spigot.packet.PacketSupplierGenerator; // Universe
+import me.nate.spigot.packet.PacketSupplierGenerator; // Universe
 
 public enum EnumProtocol {
 

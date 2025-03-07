@@ -16,7 +16,7 @@ public final class Versioning {
             return bukkitVersion;
         }
 
-        InputStream stream = Bukkit.class.getClassLoader().getResourceAsStream("META-INF/maven/xyz.krypton.spigot/pulsespigot-api/pom.properties"); // PulseSpigot
+        InputStream stream = Bukkit.class.getClassLoader().getResourceAsStream("META-INF/maven/me.nate.spigot/pulsespigot-api/pom.properties"); // PulseSpigot
         Properties properties = new Properties();
 
         if (stream != null) {

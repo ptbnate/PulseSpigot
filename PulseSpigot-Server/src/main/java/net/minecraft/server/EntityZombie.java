@@ -7,7 +7,7 @@ import java.util.UUID;
 import com.eatthepath.uuid.FastUUID;
 import org.bukkit.craftbukkit.event.CraftEventFactory;
 import org.bukkit.event.entity.EntityTransformEvent;
-import xyz.krypton.spigot.config.PaperConfig;
+import me.nate.spigot.config.PaperConfig;
 //CraftBukkit start
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityCombustByEntityEvent;

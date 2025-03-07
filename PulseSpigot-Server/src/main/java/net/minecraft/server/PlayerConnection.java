@@ -13,8 +13,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Callable;
-import xyz.krypton.spigot.config.PaperConfig;
-import xyz.krypton.spigot.config.Config;
+import me.nate.spigot.config.PaperConfig;
+import me.nate.spigot.config.Config;
+import me.nate.spigot.config.PulseConfig;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -60,8 +61,7 @@ import org.bukkit.event.player.PlayerToggleSprintEvent;
 import org.bukkit.inventory.CraftingInventory;
 import org.bukkit.inventory.InventoryView;
 import org.bukkit.util.NumberConversions;
-import xyz.krypton.spigot.config.PulseConfig;
-import xyz.krypton.spigot.util.async.AsyncUtil;
+import me.nate.spigot.util.async.AsyncUtil;
 // CraftBukkit end
 
 //import org.github.paperspigot.PaperSpigotConfig; // PaperSpigot // PulseSpigot

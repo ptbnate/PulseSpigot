@@ -17,9 +17,9 @@ import org.bukkit.craftbukkit.util.LongHash;
 import org.bukkit.event.world.ChunkUnloadEvent;
 import org.github.paperspigot.event.ServerExceptionEvent;
 import org.github.paperspigot.exception.ServerInternalException;
-import xyz.krypton.spigot.async.AsyncPriority;
-import xyz.krypton.spigot.chunk.AsyncChunkProvider;
-import xyz.krypton.spigot.chunk.ChunkMap;
+import me.nate.spigot.async.AsyncPriority;
+import me.nate.spigot.chunk.AsyncChunkProvider;
+import me.nate.spigot.chunk.ChunkMap;
 // CraftBukkit end
 
 public class ChunkProviderServer implements IChunkProvider {

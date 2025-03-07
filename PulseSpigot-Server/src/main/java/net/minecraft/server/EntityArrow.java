@@ -6,7 +6,7 @@ import java.util.List;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.entity.EntityCombustByEntityEvent;
 import org.bukkit.event.player.PlayerPickupItemEvent;
-import xyz.krypton.spigot.config.PaperConfig;
+import me.nate.spigot.config.PaperConfig;
 // CraftBukkit end
 
 public class EntityArrow extends Entity implements IProjectile {

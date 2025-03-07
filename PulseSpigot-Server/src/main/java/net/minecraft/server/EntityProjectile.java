@@ -2,10 +2,9 @@ package net.minecraft.server;
 
 import com.eatthepath.uuid.FastUUID;
 import org.bukkit.craftbukkit.event.CraftEventFactory;
-import xyz.krypton.spigot.PulseSpigot;
+import me.nate.spigot.PulseSpigot;
 
 import java.util.List;
-import java.util.UUID;
 
 public abstract class EntityProjectile extends Entity implements IProjectile {
 

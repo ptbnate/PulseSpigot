@@ -1,7 +1,7 @@
 package net.minecraft.server;
 
 import java.util.Iterator;
-import xyz.krypton.spigot.config.Config;
+import me.nate.spigot.config.Config;
 
 public class CommandDispatcher extends CommandHandler implements ICommandDispatcher {
 

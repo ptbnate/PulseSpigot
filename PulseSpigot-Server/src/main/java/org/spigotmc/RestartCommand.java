@@ -6,7 +6,7 @@ import net.minecraft.server.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import xyz.krypton.spigot.config.Config;
+import me.nate.spigot.config.Config;
 
 public class RestartCommand extends Command
 {

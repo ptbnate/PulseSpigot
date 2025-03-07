@@ -7,7 +7,7 @@ import net.minecraft.server.EntityItem;
 import net.minecraft.server.EntityItemFrame;
 import net.minecraft.server.EntityPainting;
 import net.minecraft.server.EntityPlayer;
-import xyz.krypton.spigot.config.WorldConfig;
+import me.nate.spigot.config.WorldConfig;
 
 public class TrackingRange
 {

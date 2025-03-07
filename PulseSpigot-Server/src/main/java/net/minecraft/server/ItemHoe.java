@@ -1,7 +1,7 @@
 package net.minecraft.server;
 
-import xyz.krypton.spigot.item.Burnable;
-import xyz.krypton.spigot.item.HasToolMaterial;
+import me.nate.spigot.item.Burnable;
+import me.nate.spigot.item.HasToolMaterial;
 
 public class ItemHoe extends Item implements Burnable, HasToolMaterial {
 

@@ -1,11 +1,11 @@
 package org.bukkit.craftbukkit.chunkio;
 
+import me.nate.spigot.config.PulseConfig;
 import net.minecraft.server.Chunk;
 import net.minecraft.server.ChunkProviderServer;
 import net.minecraft.server.ChunkRegionLoader;
 import net.minecraft.server.World;
 import org.bukkit.craftbukkit.util.AsynchronousExecutor;
-import xyz.krypton.spigot.config.PulseConfig;
 
 @Deprecated // PulseSpigot
 public class ChunkIOExecutor {

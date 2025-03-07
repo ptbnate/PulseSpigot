@@ -25,6 +25,7 @@ import java.util.stream.Collectors;
 import javax.imageio.ImageIO;
 
 import com.eatthepath.uuid.FastUUID;
+import me.nate.spigot.config.*;
 import net.minecraft.server.*;
 
 import org.bukkit.BanList;
@@ -107,13 +108,8 @@ import org.bukkit.plugin.messaging.StandardMessenger;
 import org.bukkit.scheduler.BukkitWorker;
 import org.bukkit.util.StringUtil;
 import org.bukkit.util.permissions.DefaultPermissions;
-import xyz.krypton.spigot.PulseSpigot;
-import xyz.krypton.spigot.async.AsyncPriority;
-import xyz.krypton.spigot.config.BukkitConfig;
-import xyz.krypton.spigot.config.PaperConfig;
-import xyz.krypton.spigot.config.Config;
-import xyz.krypton.spigot.config.TacoConfig;
-import xyz.krypton.spigot.config.PulseConfig;
+import me.nate.spigot.PulseSpigot;
+import me.nate.spigot.async.AsyncPriority;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.SafeConstructor;
 import org.yaml.snakeyaml.error.MarkedYAMLException;
@@ -134,7 +130,7 @@ import io.netty.buffer.ByteBufOutputStream;
 import io.netty.buffer.Unpooled;
 import io.netty.handler.codec.base64.Base64;
 import net.md_5.bungee.api.chat.BaseComponent;
-import xyz.krypton.spigot.event.command.UnknownCommandEvent;
+import me.nate.spigot.event.command.UnknownCommandEvent;
 
 public final class CraftServer implements Server {
     private static final Player[] EMPTY_PLAYER_ARRAY = new Player[0];

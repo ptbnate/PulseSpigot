@@ -3,7 +3,7 @@ package net.minecraft.server;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.UUID;
-import xyz.krypton.spigot.config.Config;
+import me.nate.spigot.config.Config;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

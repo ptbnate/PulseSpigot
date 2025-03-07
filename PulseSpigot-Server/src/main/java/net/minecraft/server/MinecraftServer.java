@@ -33,10 +33,12 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 import javax.imageio.ImageIO;
+
+import me.nate.spigot.config.PulseConfig;
 import org.bukkit.event.server.ServerLoadEvent;
-import xyz.krypton.spigot.async.AsyncPriority;
-import xyz.krypton.spigot.chunk.AsyncChunkProvider;
-import xyz.krypton.spigot.config.Config;
+import me.nate.spigot.async.AsyncPriority;
+import me.nate.spigot.chunk.AsyncChunkProvider;
+import me.nate.spigot.config.Config;
 import org.apache.commons.lang3.Validate;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -46,7 +48,7 @@ import org.apache.logging.log4j.Logger;
 import joptsimple.OptionSet;
 
 import co.aikar.timings.SpigotTimings; // Spigot
-import xyz.krypton.spigot.config.PulseConfig;
+
 // CraftBukkit end
 
 public abstract class MinecraftServer implements Runnable, ICommandListener, IAsyncTaskHandler, IMojangStatistics { // PulseSpigot

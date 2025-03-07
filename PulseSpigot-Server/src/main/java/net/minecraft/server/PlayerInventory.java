@@ -5,10 +5,10 @@ import java.util.concurrent.Callable;
 // CraftBukkit start
 import java.util.List;
 
+import me.nate.spigot.config.PulseConfig;
 import org.bukkit.craftbukkit.entity.CraftHumanEntity;
 import org.bukkit.craftbukkit.inventory.CraftItemStack;
 import org.bukkit.entity.HumanEntity;
-import xyz.krypton.spigot.config.PulseConfig;
 // CraftBukkit end
 
 public class PlayerInventory implements IInventory {

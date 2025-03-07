@@ -1,7 +1,7 @@
 package net.minecraft.server;
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import xyz.krypton.spigot.config.Config;
+import me.nate.spigot.config.Config;
 import java.lang.ref.WeakReference;
 import java.util.Iterator;
 import java.util.List;
