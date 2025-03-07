@@ -37,5 +37,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: PulseSpigot
-          path: PulseSpigot-Server/build/libs/PulseSpigot-1.8.8-R0.1-SNAPSHOT.jar
+          path: PulseSpigot-Server/build/libs/pulsespigot-server-1.8.8-R0.1-SNAPSHOT
           if-no-files-found: error

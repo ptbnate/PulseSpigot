@@ -2,8 +2,8 @@ name: PulseSpigot Nightly Build
 
 on:
   schedule:
-    - cron: "0 0 * * *"  
-  workflow_dispatch:  
+    - cron: "0 0 * * *"  # Runs every day at midnight UTC
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   nightly-build:
@@ -13,20 +13,17 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Set up JDK 8
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: 8
-          server-id: github
-          settings-path: ${{ github.workspace }}
+          cache: gradle
 
-      - name: Install Minecraft server to local repo
-        run: |
-          git submodule update --init
-          ./remap.sh
+      - name: Grant execute permission to Gradle wrapper
+        run: chmod +x gradlew
 
-      - name: Build with Maven
-        run: mvn clean package --file $GITHUB_WORKSPACE/pom.xml
+      - name: Build with Gradle
+        run: ./gradlew clean build
 
       - name: Upload Nightly Release
         uses: softprops/action-gh-release@v2
@@ -37,5 +34,4 @@ jobs:
           prerelease: true
           token: ${{ secrets.GITHUB_TOKEN }}
           files: |
-            ${{ github.workspace }}/PulseSpigot-Server/target/PulseSpigot.jar
-            ${{ github.workspace }}/PulseSpigot-API/target/PulseSpigot-API.jar
+            PulseSpigot-Server/build/libs/pulsespigot-server-1.8.8-R0.1-SNAPSHOT
