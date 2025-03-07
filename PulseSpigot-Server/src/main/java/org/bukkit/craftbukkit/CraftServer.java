@@ -135,7 +135,6 @@ import io.netty.buffer.Unpooled;
 import io.netty.handler.codec.base64.Base64;
 import net.md_5.bungee.api.chat.BaseComponent;
 import xyz.krypton.spigot.event.command.UnknownCommandEvent;
-import xyz.nate.loader.StartServer;
 
 public final class CraftServer implements Server {
     private static final Player[] EMPTY_PLAYER_ARRAY = new Player[0];
@@ -219,7 +218,7 @@ public final class CraftServer implements Server {
         PotionEffectType.stopAcceptingRegistrations();
         // Ugly hack :(
 
-        if (!StartServer.useConsole) {
+        if (!Main.useConsole) {
             getLogger().info("Console input is disabled due to --noconsole command argument");
         }
 

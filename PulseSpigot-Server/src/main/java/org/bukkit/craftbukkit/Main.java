@@ -1,4 +1,4 @@
-package xyz.nate.loader;
+package org.bukkit.craftbukkit;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,9 +11,9 @@ import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import net.minecraft.server.MinecraftServer;
 import net.minecrell.terminalconsole.TerminalConsoleAppender; // Paper
-import org.bukkit.craftbukkit.CraftServer;
 
-public class StartServer {
+
+public class Main {
     public static boolean useJline = true;
     public static boolean useConsole = true;
 
@@ -164,14 +164,14 @@ public class StartServer {
         try {
             options = parser.parse(args);
         } catch (joptsimple.OptionException ex) {
-            Logger.getLogger(StartServer.class.getName()).log(Level.SEVERE, ex.getLocalizedMessage());
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, ex.getLocalizedMessage());
         }
 
         if ((options == null) || (options.has("?"))) {
             try {
                 parser.printHelpOn(System.out);
             } catch (IOException ex) {
-                Logger.getLogger(StartServer.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else if (options.has("v")) {
             System.out.println(CraftServer.class.getPackage().getImplementationVersion());

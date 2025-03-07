@@ -5,43 +5,34 @@ dependencies {
     implementation(project(":pulsespigot-api"))
 
     // Native (Minecraft) libraries start
-    compileOnly("io.netty:netty-all:4.1.78.Final") // PulseSpigot - update netty
+    implementation("io.netty:netty-all:4.1.78.Final") // PulseSpigot - update netty
     // PulseSpigot start - updated log4j to 2.19.0
     val log4jVersion = "2.19.0"
-    library("org.apache.logging.log4j:log4j-api:$log4jVersion")
-    library("org.apache.logging.log4j:log4j-core:$log4jVersion")
-    library("org.apache.logging.log4j:log4j-slf4j-impl:$log4jVersion") // PulseSpigot - Backport Plugin#getSLF4JLogger
+    implementation("org.apache.logging.log4j:log4j-api:$log4jVersion")
+    implementation("org.apache.logging.log4j:log4j-core:$log4jVersion")
+    implementation("org.apache.logging.log4j:log4j-slf4j-impl:$log4jVersion") // PulseSpigot - Backport Plugin#getSLF4JLogger
     // PulseSpigot end - updated log4j to 2.19.0
-    library("commons-io:commons-io:2.4")
-    library("commons-codec:commons-codec:1.9")
-    library("net.sf.jopt-simple:jopt-simple:5.0") // PulseSpigot - updated jopt-simple to 5.0
-    implementation("com.mojang:authlib:1.5.21") {
-        // PulseSpigot start - use our versions of dependencies
-        exclude("org.apache.commons")
-        exclude("commons-io")
-        exclude("commons-codec")
-        exclude("org.apache.logging.log4j")
-        exclude("com.google.code.gson")
-        exclude("com.google.guava")
-        // PulseSpigot end
-    }
-    library("org.xerial:sqlite-jdbc:3.7.2")
-    compileOnly("mysql:mysql-connector-java:5.1.14")
+    implementation("commons-io:commons-io:2.4")
+    implementation("commons-codec:commons-codec:1.9")
+    implementation("net.sf.jopt-simple:jopt-simple:5.0") // PulseSpigot - updated jopt-simple to 5.0
+    implementation("com.mojang:authlib:1.5.21")
+    implementation("org.xerial:sqlite-jdbc:3.7.2")
+    implementation("mysql:mysql-connector-java:5.1.14")
     // Native libraries end
 
     // PulseSpigot libraries start
     // Paper start - Use TerminalConsoleAppender
-    library("net.minecrell:terminalconsoleappender:1.3.0")
+    implementation("net.minecrell:terminalconsoleappender:1.3.0")
     val jLineVersion = "3.21.0"
-    library("org.jline:jline-reader:$jLineVersion")
-    library("org.jline:jline-terminal:$jLineVersion")
-    library("org.jline:jline-terminal-jansi:$jLineVersion")
-    library("org.fusesource.jansi:jansi:2.4.0")
+    implementation("org.jline:jline-reader:$jLineVersion")
+    implementation("org.jline:jline-terminal:$jLineVersion")
+    implementation("org.jline:jline-terminal-jansi:$jLineVersion")
+    implementation("org.fusesource.jansi:jansi:2.4.0")
     // Paper end
 
     val byteBuddyVersion = "1.12.12"
-    library("net.bytebuddy:byte-buddy-agent:$byteBuddyVersion")
-    library("net.bytebuddy:byte-buddy:$byteBuddyVersion")
+    implementation("net.bytebuddy:byte-buddy-agent:$byteBuddyVersion")
+    implementation("net.bytebuddy:byte-buddy:$byteBuddyVersion")
 
     val okaeriConfigsVersion = "5.0.0-beta.6"
     implementation("eu.okaeri:okaeri-configs-core:$okaeriConfigsVersion")
@@ -50,9 +41,9 @@ dependencies {
     implementation("eu.okaeri:okaeri-configs-validator-okaeri:$okaeriConfigsVersion")
 
     implementation("com.velocitypowered:velocity-native:1.1.9")
-    library("com.github.ben-manes.caffeine:caffeine:2.9.3")
-    library("it.unimi.dsi:fastutil:8.5.11")
-    library("com.eatthepath:fast-uuid:0.2.0")
+    implementation("com.github.ben-manes.caffeine:caffeine:2.9.3")
+    implementation("it.unimi.dsi:fastutil:8.5.11")
+    implementation("com.eatthepath:fast-uuid:0.2.0")
     // PulseSpigot libraries end
 }
 

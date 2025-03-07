@@ -50,52 +50,6 @@ subprojects {
             events(TestLogEvent.STANDARD_OUT)
         }
     }
-
-    val cerberusLibraries = mutableSetOf<String>()
-    ext["cerberusLibraries"] = cerberusLibraries
-
-    val library by configurations.creating
-    val libraryApi by configurations.creating
-
-    afterEvaluate {
-        dependencies {
-            library.dependencies.forEach {
-                compileOnly(it)
-                cerberusLibraries.add("${it.group}:${it.name}:${it.version}")
-            }
-            libraryApi.dependencies.forEach {
-                compileOnlyApi(it)
-                cerberusLibraries.add("${it.group}:${it.name}:${it.version}")
-            }
-        }
-
-        tasks.withType<ShadowJar> {
-            // include cerberus libraries as file
-            buildDir.mkdirs()
-            val librariesFile = File(buildDir, "libraries.cerberus")
-            if (!librariesFile.exists()) {
-                librariesFile.createNewFile()
-            }
-
-            val resultDependencies = LinkedHashSet<String>(cerberusLibraries)
-            this.project.configurations.stream()
-                    .flatMap { it.allDependencies.stream() }
-                    .filter { it is ProjectDependency }
-                    .map { it as ProjectDependency }
-                    .map { it.dependencyProject.project }
-                    .distinct()
-                    .map { it.ext }
-                    .forEachOrdered { extra ->
-                        if (!extra.has("cerberusLibraries")) {
-                            return@forEachOrdered
-                        }
-                        resultDependencies += extra["cerberusLibraries"] as MutableSet<String>
-                    }
-            librariesFile.writeText(resultDependencies.joinToString("\n"))
-            from(librariesFile)
-        }
-    }
-
 }
 
 ext["gitHash"] = project.getCurrentGitHash()

@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
-import xyz.nate.loader.StartServer;
+import org.bukkit.craftbukkit.Main;
 import xyz.krypton.spigot.config.Config;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -62,7 +62,7 @@ public class DedicatedServer extends MinecraftServer implements IMinecraftServer
         Thread thread = new Thread("Server console handler") {
             public void run() {
                 // CraftBukkit start
-                if (!StartServer.useConsole) {
+                if (!Main.useConsole) {
                     return;
                 }
                 // CraftBukkit end

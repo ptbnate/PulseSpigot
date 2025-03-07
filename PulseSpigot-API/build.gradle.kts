@@ -5,24 +5,24 @@ java {
 
 dependencies {
     // Native (Minecraft) libraries start
-    compileOnlyApi("com.google.guava:guava:17.0") // Loaded by CerberusLoader
-    compileOnlyApi("com.google.code.gson:gson:2.2.4") // Loaded by CerberusLoader
-    compileOnlyApi("org.yaml:snakeyaml:1.15") // Loaded by CerberusLoader
-    libraryApi("com.googlecode.json-simple:json-simple:1.1.1")
-    libraryApi("commons-lang:commons-lang:2.6")
-    libraryApi("org.avaje:ebean:2.8.1")
-    libraryApi("net.sf.trove4j:trove4j:3.0.3")
+    api("com.google.guava:guava:17.0") // Loaded by CerberusLoader
+    api("com.google.code.gson:gson:2.2.4") // Loaded by CerberusLoader
+    api("org.yaml:snakeyaml:1.15") // Loaded by CerberusLoader
+    api("com.googlecode.json-simple:json-simple:1.1.1")
+    api("commons-lang:commons-lang:2.6")
+    api("org.avaje:ebean:2.8.1")
+    api("net.sf.trove4j:trove4j:3.0.3")
     api("net.md-5:bungeecord-chat:1.8-SNAPSHOT")
     // Native libraries end
 
     // PulseSpigot libraries start
-    libraryApi("org.apache.commons:commons-lang3:3.12.0") // PulseSpigot - updated commons-lang3 to 3.12.0 // PulseSpigot - Add commons-lang3 to API
-    libraryApi("org.slf4j:slf4j-api:1.7.36") // Backport Plugin#getSLF4JLogger
-    libraryApi("org.jetbrains:annotations:24.0.1") // PulseSpigot - add jetbrains annotations - future is now 😎
+    api("org.apache.commons:commons-lang3:3.12.0") // PulseSpigot - updated commons-lang3 to 3.12.0 // PulseSpigot - Add commons-lang3 to API
+    api("org.slf4j:slf4j-api:1.7.36") // Backport Plugin#getSLF4JLogger
+    api("org.jetbrains:annotations:24.0.1") // PulseSpigot - add jetbrains annotations - future is now 😎
 
     // Paper start - Use ASM for event executors
-    libraryApi("org.ow2.asm:asm:9.4")
-    libraryApi("org.ow2.asm:asm-commons:9.4")
+    api("org.ow2.asm:asm:9.4")
+    api("org.ow2.asm:asm-commons:9.4")
     // Paper end
     // PulseSpigot libraries end
 }
