@@ -6,7 +6,8 @@ The purpose of this spigot is to out-perform paid forks like Carbon in performan
 - **Nate** – Original author and primary contributor, with the most valuable code contributions to the project. Huge credit goes to him.  
 - **Heath Logan Campbell** – Various NMS optimizations.  
 - **IonSpigot** – Lag-compensated ticking, movement caching, and flushing.  
-- **Albert** – Configurable pearls.  
+- **Albert** – Configurable pearls.
+- **Beanes** - Base of the profile system. 
 - **P3ridot** – Most of the NMS optimizations.  
 - **uRyanxD (PandaSpigot)** – Backported the modern tick loop from 1.13+.  
 
