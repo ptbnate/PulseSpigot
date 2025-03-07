@@ -43,6 +43,14 @@ dependencies {
 ```
 </details>
 
+## Building
+To compile PandaSpigot, you'll need:
+- JDK 8 (or above)
+- Git
+- Bash
+
+PulseSpigot can be built by running `./gradlew clean build`.
+
 ## Credits  
 - **Nate** – Original author and primary contributor, with the most valuable code contributions to the project. 
 - **Heath Logan Campbell** – Various NMS optimizations.  
