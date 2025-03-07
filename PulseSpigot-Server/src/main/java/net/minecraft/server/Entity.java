@@ -321,7 +321,6 @@ public abstract class Entity implements ICommandListener {
         this.lastZ = this.locZ;
         this.lastPitch = this.pitch;
         this.lastYaw = this.yaw;
-        this.setLastSprintStatus(isSprinting()); // Pulse
         if (!this.world.isClientSide && this.world instanceof WorldServer) {
             MinecraftServer minecraftserver = ((WorldServer) this.world).getMinecraftServer();
             int i = this.L();
@@ -1802,29 +1801,6 @@ public abstract class Entity implements ICommandListener {
     public void setSneaking(boolean flag) {
         this.b(1, flag);
     }
-
-    // PulseSpigot start - improve knockback
-    public boolean[] lastSprintStatus = new boolean[4];
-
-    public void setLastSprintStatus(boolean sprintStatus) {
-        lastSprintStatus[3] = lastSprintStatus[2];
-        lastSprintStatus[2] = lastSprintStatus[1];
-        lastSprintStatus[1] = lastSprintStatus[0];
-        lastSprintStatus[0] = sprintStatus;
-    }
-
-    public boolean isSprintingAccurate;
-
-    public void setSprintingAccurate(boolean flag) {
-        this.isSprintingAccurate = flag;
-    }
-    public boolean isSprintingAccurate() {
-        for (boolean sprintingStatus : lastSprintStatus) {
-            if (sprintingStatus) return true;
-        }
-        return false;
-    }
-    // PulseSpigot end
 
     public boolean isSprinting() {
         return this.g(3);

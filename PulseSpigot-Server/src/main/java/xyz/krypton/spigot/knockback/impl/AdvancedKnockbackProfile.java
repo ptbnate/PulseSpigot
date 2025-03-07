@@ -141,7 +141,7 @@ public class AdvancedKnockbackProfile extends KnockbackProfile {
                             (float) (i == 0 ? 1 : i) * extraHorizontal)
             );
 
-            if (wTap) victim.setSprintingAccurate(false);
+            if (wTap) victim.setSprinting(false);
         }
 
         if (source instanceof EntityPlayer && source.velocityChanged) {

@@ -135,7 +135,7 @@ public class ClassicKnockbackProfile extends KnockbackProfile {
             );
             victim.motX *= slowdown;
             victim.motY *= slowdown;
-            victim.setSprintingAccurate(false);
+            victim.setSprinting(false);
         }
 
         if (source instanceof EntityPlayer && source.velocityChanged) {

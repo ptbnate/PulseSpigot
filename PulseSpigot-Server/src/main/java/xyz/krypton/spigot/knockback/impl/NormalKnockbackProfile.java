@@ -105,7 +105,7 @@ public class NormalKnockbackProfile extends KnockbackProfile {
 
                 victim.motX *= slowdown;
                 victim.motZ *= slowdown;
-                victim.setSprintingAccurate(false);
+                victim.setSprinting(false);
             }
 
             EntityPlayer attackedPlayer = (EntityPlayer) source;
