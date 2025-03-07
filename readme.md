@@ -3,7 +3,7 @@ A 1.8 fork of PaperSpigot that aims to optimize performance, provide long-term s
 The purpose of this spigot is to out-perform paid forks like Carbon in performance.
 
 ## Credits  
-- **Nate** – Original author and primary contributor, with the most valuable code contributions to the project. Huge credit goes to him.  
+- **Nate** – Original author and primary contributor, with the most valuable code contributions to the project. 
 - **Heath Logan Campbell** – Various NMS optimizations.  
 - **IonSpigot** – Lag-compensated ticking, movement caching, and flushing.  
 - **Albert** – Configurable pearls.
