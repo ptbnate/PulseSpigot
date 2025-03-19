@@ -9,7 +9,6 @@
 
 package me.nate.spigot.knockback;
 
-import me.nate.spigot.knockback.impl.ClassicKnockbackProfile;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.craftbukkit.entity.CraftPlayer;
@@ -31,7 +30,6 @@ public class KnockbackHandler {
     private KnockbackProfile activeProfile;
 
     public KnockbackHandler() {
-        implementationTypeMap.put("classic", ClassicKnockbackProfile.class);
         implementationTypeMap.put("normal", NormalKnockbackProfile.class);
         initialize();
     }
